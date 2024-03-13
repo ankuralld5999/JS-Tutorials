@@ -183,3 +183,56 @@ function newGame() {
 ```javascript
 
 ```
+
+## project 6 solution
+
+```javascript
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+
+function random(num) {
+  return parseInt(Math.random() * num + 1);
+}
+// console.log(start)
+// console.log(stop)
+
+let startColor;
+
+start.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (!startColor) {
+    startColor = setInterval(function () {
+      const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+      document.querySelector('body').style.backgroundColor = rndCol;
+    }, 1000);
+  }
+  console.log('START');
+});
+
+stop.addEventListener('click', function () {
+  clearInterval(startColor);
+  startColor = null;
+  console.log('STOPPED');
+  document.querySelector('body').style =
+    'background-color: #212121; color: #fff';
+});
+
+```
+
+## project 7 solution
+
+```javascript
+
+```
+
+## project 8 solution
+
+```javascript
+
+```
+
+## project 9 solution
+
+```javascript
+
+```
